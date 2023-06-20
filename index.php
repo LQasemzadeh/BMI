@@ -55,8 +55,11 @@ function validate($data){
 </form>
 
 <?php
+
 error_reporting(0);
 echo "<span class='pass'>Your BMI is : ". number_format($bmipass , 2) ."</span>";
+
+
 if (isset($_POST['submit'])){
     if ($bmipass >= 13.6 && $bmipass <= 18.5) {
         echo "<span style='color:#00203FFF; display:block; margin-top:5px ;margin-right:50px'> Low body weight. You need to gain weight by eating moderately.</span>";?>
@@ -80,6 +83,10 @@ if (isset($_POST['submit'])){
 } else {
     echo "";
 }
+
 ?>
 
+<?php include 'count.php'; ?>
 <?php include 'footer.php'; ?>
+
+
